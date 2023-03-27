@@ -3,8 +3,8 @@ library(jsonlite)
 library(lubridate)
 
 while (TRUE) {
-  hora <- hour(Sys.time())
-  if(hora == 23){
+  hora <- hour(Sys.time()) + 1
+  if(hora == 22){
     #-----------------------------------------------------------------
     # GET NÚMERO DE VISITAS DIARIA EN TOTEM
     #-----------------------------------------------------------------
