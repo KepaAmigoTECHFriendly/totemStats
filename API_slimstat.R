@@ -4,11 +4,11 @@ library(lubridate)
 
 while (TRUE) {
   hora <- hour(Sys.time()) + 1
-  if(hora == 22){
+  if(hora == 9){
     #-----------------------------------------------------------------
-    # GET NÚMERO DE VISITAS DIARIA EN TOTEM
+    # GET NÚMERO DE VISITAS DIARIA EN TOTEM https://contenidos.plasencia.es
     #-----------------------------------------------------------------
-    endpoint <- "https://contenidos.plasencia.es/wp-json/slimstat/v1/get?token=d308a42a72b125df2abd6283283de87a&function=recent&dimension=*&filters=interval%20equals%20-1" # Endpoint de la API de Slimstat
+    endpoint <- "http://wordpress:80/wp-json/slimstat/v1/get?token=d308a42a72b125df2abd6283283de87a&function=recent&dimension=*&filters=interval%20equals%20-1" # Endpoint de la API de Slimstat
     
     response <- GET(endpoint, add_headers("Content-Type"="application/json","Accept"="application/json"))
     
