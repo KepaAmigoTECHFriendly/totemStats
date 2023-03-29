@@ -4,7 +4,7 @@ library(lubridate)
 
 while (TRUE) {
   hora <- hour(Sys.time()) + 1
-  if(hora == 9){
+  if(hora == 11){
     #-----------------------------------------------------------------
     # GET NÚMERO DE VISITAS DIARIA EN TOTEM https://contenidos.plasencia.es
     #-----------------------------------------------------------------
@@ -56,8 +56,7 @@ while (TRUE) {
                        verify= FALSE,
                        encode = "json",verbose()
     )
-  }else{
-    Sys.sleep(1800)
   }
+  Sys.sleep(1800)
 }
 
