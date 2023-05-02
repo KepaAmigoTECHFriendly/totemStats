@@ -2,9 +2,10 @@ library(httr)
 library(jsonlite)
 library(lubridate)
 
+#http://wordpress:80
 while (TRUE) {
-  hora <- hour(Sys.time()) + 1
-  if(hora == 11){
+  hora <- hour(Sys.time()) + 2
+  if(hora == 14){
     #-----------------------------------------------------------------
     # GET NÚMERO DE VISITAS DIARIA EN TOTEM https://contenidos.plasencia.es
     #-----------------------------------------------------------------
@@ -56,7 +57,8 @@ while (TRUE) {
                        verify= FALSE,
                        encode = "json",verbose()
     )
+    Sys.sleep(86000)
   }
-  Sys.sleep(1800)
+  
 }
 
