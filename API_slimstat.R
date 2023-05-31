@@ -5,7 +5,7 @@ library(lubridate)
 #http://wordpress:80
 while (TRUE) {
   hora <- hour(Sys.time()) + 2
-  if(hora == 14){
+  if(hora == 21){
     #-----------------------------------------------------------------
     # GET NÚMERO DE VISITAS DIARIA EN TOTEM https://contenidos.plasencia.es
     #-----------------------------------------------------------------
@@ -59,6 +59,7 @@ while (TRUE) {
     )
     Sys.sleep(86000)
   }
+  Sys.sleep(3540)
   
 }
 
